@@ -11,7 +11,8 @@ link = "https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_select"
 try:
     browser = webdriver.Chrome()
     browser.get(link)
-    browser.find_element(By.CSS_SELECTOR, "select#cars").click()
+    sel = browser.find_element(By.CSS_SELECTOR, "select#cars")
+    sel.click()
     browser.find_element(By.CSS_SELECTOR, "[value = 'audi']").click()
     press_button = browser.find_element(By.CSS_SELECTOR, "[type = 'submit']")
     press_button.click()
